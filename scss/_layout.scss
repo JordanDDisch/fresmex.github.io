@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+	 padding: 0 1em;
+	@include breakpoint($print-breakpoint max-width) {
+	  max-width: 297mm;
+	  max-height: 210mm;
+	  margin: auto;
+	}
+}
+
+.col-parent {
+	@include breakpoint($print-breakpoint max-width) {
+	  width: 50%;
+	  height: 100%;
+	  float: left;
+	  padding: 0 1em;
+	}
+	@include breakpoint($medium max-width) {
+		width: 100%;
+	}
+}
+
+.col-parent-1 {
+	@include breakpoint($print-breakpoint max-width) {
+  	padding-left: 0px;
+	}
+}
+.col-parent-2 {
+	@include breakpoint($print-breakpoint max-width) {
+  	padding-right: 0px;
+	}
+}
+
+.col-child {
+	@include breakpoint($print-breakpoint max-width) {
+  	float: left;
+	  width: 100%;
+	}
+}
+.col-child-left {
+	@include breakpoint($print-breakpoint max-width) {
+ 	 	width: 50%;
+	  padding-right: 1em;
+	}
+	@include breakpoint($small max-width) {
+		width: 100%;
+	}
+}
+.col-child-right {
+	@include breakpoint($print-breakpoint max-width) {
+  	width: 50%;
+	  padding-left: 1em;
+	}
+	@include breakpoint($small max-width) {
+		width: 100%;
+	}
+}
+
+.centered-column {
+	@include breakpoint($print-breakpoint max-width) {
+  	padding: 0;
+	  .order-title { text-align: center; }
+	  ul {
+	    width: 75%;
+	    margin: auto;
+	  }
+	}
+}
+
+.centered-column-2 {
+	@include breakpoint($print-breakpoint max-width) {
+ 	 padding-left: 2em;
+	}
+}

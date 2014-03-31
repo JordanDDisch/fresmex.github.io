@@ -1,0 +1,12 @@
+.smaller-text {
+  font-size: .85em;
+  li {
+    margin-bottom: 0;
+  }
+}
+
+.col-parent-2 .col-child {
+	@include breakpoint($print-breakpoint max-width) {
+  	margin-bottom: .10em;
+  }
+}

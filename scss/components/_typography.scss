@@ -1,0 +1,67 @@
+body {
+  font-family: verdana;
+  font-size: 14px;
+}
+
+.order-title {
+  font-family: 'Rancho', cursive;
+  font: bold;
+  color: $color-1;
+  text-transform:uppercase;
+  font-size: 1.25em;
+  display: block;
+}
+
+.wrapper {
+  width: 25%;
+}
+
+.bold-star {
+}
+
+ul {
+  @include no-bullets;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0 0 1em 1em;
+    position: relative;
+  }
+}
+
+.magic-asterisk > li:before, .magic-asterisk > li {
+	content:"*  ";
+	text-indent: -1em;
+	list-style-position:inside;
+}
+
+
+
+.order-title {
+	list-style-type: none;
+}
+
+h2, h3 {
+  font-family: 'Rancho', cursive;
+  text-transform: uppercase;
+  font-size: 2em;
+  margin: .5em 0;
+  color: $color-1;
+}
+
+.price {
+  float: right;
+}
+
+.absolute-price {
+  position: absolute;
+  right: 0;
+  top: .025em;
+  font-size: 1em;
+}
+
+.supplemental {
+  font-style: italic;
+  padding: .25em;
+  margin: 1em 0;
+}
